@@ -1,0 +1,23 @@
+{% extends "html/inicioGeneral.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <form role="form" action="/registro" method="post">
+            <p>Nombre y Apellido</p>
+            <input type="text" name="nombre" value="{{nombre}}" placeholder="Introduzca su nombre y apellido"/>
+            </br></br>
+            <p>Email</p>
+            <input type="email" name="email" value="{{email}}" placeholder="Introduzca su email"/>
+            <p><font color="red">{{email_error}}</font></p>
+            </br>
+            <p>Contraseña</p>
+            <input type="password" name="passwd1" placeholder="Contraseña"/>
+            <p><font color="red">{{passwd_error}}</font></p>
+            </br>
+            <p>Repetir contraseña</p>
+            <input type="password" name="passwd2" placeholder="Repetir contraseña"/>
+            <p><font color="red">{{validar_error}}</font></p>
+            </br></br>
+            <button class="btn btn-lg btn-default" type="submit">Registrar</button>
+        </form>
+    </div>        
+{% endblock %}

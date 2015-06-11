@@ -1,0 +1,48 @@
+{% extends "html/usuario.html" %}
+{% block content %}
+    <div class="jumbotron">
+		<div class="row">
+			<div class="col-md-6">
+				<tbody>
+					<tr>
+			            <th>
+			                <img class="img-thumbnail" src="/serve/{{url}}"/>
+			            </th>
+					   	<th>
+	    					<span class="label label-default">{{foto.titulo}}</span>
+				    		<span class="label label-default">{{foto.autor}}</span>
+				    	</th>
+		            <tr>
+	            </tbody>
+	        </div>
+	    </div>
+	</br>
+	</br>
+	    <div>
+		    <form action="/editar/{{foto.mod}}" method="post">
+		        <input type="checkbox" value="resize" name="resize">Cambiar tamaño</input></br></br>
+		        X: <input type="text" name="rx"/></br></br>
+		        Y: <input type="text" name="ry"/></br></br>
+		        <input type="checkbox" value="rotate" name="rotate">Rotar n veces 90º a la derecha</input></br></br>
+		        n: <input type="text" name="degree"/></br></br>
+		        <input type="checkbox" value="fliph" name="fliph">Voltear horizontalmente</input></br></br>
+		        <input type="checkbox" value="flipv" name="flipv">Voltear verticalmente</input></br></br>
+		        <input type="checkbox" value="lucky" name="lucky">Mejora automática</input></br></br>
+		        <button class="btn btn-lg btn-default" type="submit">Transformar</button>
+		    </form>
+		</div>
+	</br>
+	</br>
+		<div class="row">
+			<div class="col-md-6">
+				<tbody>
+					<tr>
+			            <th>
+					    	<img class="img-thumbnail" src="/serve/{{foto.mod}}"/>
+					   	</th>
+		            <tr>
+	            </tbody>
+	        </div>
+	    </div>
+	<div>
+{% endblock %}

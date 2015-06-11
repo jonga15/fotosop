@@ -1,0 +1,13 @@
+{% extends "html/usuario.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <form role="form" action="{{url}}" enctype="multipart/form-data" method="post">
+            <p>Título</p>
+            <input type="text" name="title" placeholder="Introduzca título de la foto"/></br></br>
+            <p>Imagen</p>
+            <input type="file" name="file" value="{{imagen}}" placeholder="Imagen"/></br></br>
+
+            <button class="btn btn-lg btn-default" type="submit">Aceptar</button>
+        </form>
+    </div>        
+{% endblock %}

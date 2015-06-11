@@ -1,0 +1,26 @@
+{% extends "html/usuario.html" %}
+{% block content %}
+    <h1>¡Bienvenido {{usuario}}!</h1>
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-6">
+				<tbody>
+					<tr>
+    					{% for foto in fotos %}
+	    				<th>
+	    					<img class="img-thumbnail" src="serve/{{foto.pic}}"/>
+	    				</th>
+	    				<th>
+	    					<span class="label label-default">{{foto.titulo}}</span>
+				    		<span class="label label-default">{{foto.autor}}</span>
+				    	</th>
+				    	</br></br>
+				    	<p><a class="btn btn-lg btn-default" href="editar/{{foto.pic}}">Editar</a></p>
+				    	<br><br>
+    					{% endfor %}
+    				</tr>
+    			</tbody>
+    		<div>
+    	<div>
+    <div>
+{% endblock %}

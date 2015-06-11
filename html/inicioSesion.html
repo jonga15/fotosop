@@ -1,0 +1,17 @@
+{% extends "html/inicioGeneral.html" %}
+{% block content %}
+        <!--Inicio Sesion-->
+        
+    <div class="jumbotron">
+        <form action="/inicioSesion" method="post">
+            <p>Email</p>
+            <input type="email" name="email" value="{{email}}" placeholder="Introduzca su email"/>
+            </br></br>
+            <p>Contraseña</p>
+            <input type="password" name="passwd" placeholder="Contraseña"/>
+            </br></br>
+            <button class="btn btn-lg btn-default" type="submit">Aceptar</button>
+            <p><font color="red">{{mensaje_error}}</font></p>
+        </form>
+    </div>
+{% endblock %}
